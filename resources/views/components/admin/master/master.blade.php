@@ -9,3 +9,7 @@
 </head>
 <x-admin.master.header/>
 <x-admin.master.sub-header/>
+    <div class="main-container" id="container">
+    <x-admin.master.sidebar/>
+        {{$slot}}
+    </div>
