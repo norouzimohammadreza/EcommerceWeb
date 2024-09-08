@@ -8,3 +8,4 @@
     <x-admin.master.links-loader/>
 </head>
 <x-admin.master.header/>
+<x-admin.master.sub-header/>
