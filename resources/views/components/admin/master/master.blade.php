@@ -7,9 +7,13 @@
     <title>{{$title}}</title>
     <x-admin.master.links-loader/>
 </head>
+<body>
 <x-admin.master.header/>
 <x-admin.master.sub-header/>
     <div class="main-container" id="container">
     <x-admin.master.sidebar/>
         {{$slot}}
     </div>
+<x-admin.master.js-loader/>
+</body>
+</html>
