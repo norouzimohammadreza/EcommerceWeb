@@ -8,7 +8,7 @@
                             <div class="row mb-4">
                                 <div class="col">
                                     <label for="title" class="d-block">نام دسته بندی </label>
-                                    <input id="title" name="title" type="text" class="form-control" placeholder="نام دسته بندی " value="{{old('title')}}">
+                                    <input id="title" name="title" type="text" class="form-control" placeholder="نام دسته بندی " value="">
                                     <p class="text-danger">@error('title')
                                         {{ $message }}
                                         @enderror</p>
