@@ -12,7 +12,14 @@
 <x-admin.master.sub-header/>
     <div class="main-container" id="container">
     <x-admin.master.sidebar/>
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+                <div class="row layout-top-spacing">
         {{$slot}}
+                </div>
+            </div>
+            <x-admin.master.footer/>
+        </div>
     </div>
 <x-admin.master.js-loader/>
 </body>
