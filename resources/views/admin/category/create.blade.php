@@ -1,6 +1,5 @@
 <x-admin.master.master>
     <x-slot name="title">Create Category</x-slot>
-
                 <div class="col-lg-12 col-12 layout-spacing">
                     <div class="statbox widget box box-shadow">
                         <form action="{{route('category.store')}}" method="post" enctype="multipart/form-data">

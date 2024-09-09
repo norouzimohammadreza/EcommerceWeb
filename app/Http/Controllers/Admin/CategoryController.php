@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
@@ -29,10 +30,11 @@ class CategoryController extends Controller
         $inputs = $validation->validated();
             $name = $inputs['title'] . '.' . $inputs['image']->extension();
             $inputs['image']->storeAs('category', $name);
-            Category::create([
-                'title' => $inputs['title'],
-                'image' => $name
-            ]);
+           Category::create([
+               'title' => $inputs['title'],
+               'image' => $name
+           ]);
+        Alert::success('دسته بندی', 'دسته بندی جدید با موفقیت ایجاد شد.');
             return redirect()->route('category.index');
     }
 }

@@ -4,7 +4,7 @@
         <ul class="list-unstyled menu-categories" id="accordionExample">
 
             <li class="menu">
-                <a href="#dashboard" data-active="true" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M10 3H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1m10 0h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1M10 13H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1m7 0a4 4 0 1 1-3.995 4.2L13 17l.005-.2A4 4 0 0 1 17 13" />
@@ -20,7 +20,7 @@
                     </div>
                 </a>
                 <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
-                    <li class="active">
+                    <li>
                         <a href="{{route('category.create')}}">  اضافه کردن دسته بندی </a>
                     </li>
                     <li>

@@ -8,6 +8,7 @@
     <x-admin.master.links-loader/>
 </head>
 <body>
+    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
 <x-admin.master.header/>
 <x-admin.master.sub-header/>
     <div class="main-container" id="container">
