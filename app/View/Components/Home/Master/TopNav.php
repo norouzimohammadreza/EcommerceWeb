@@ -11,9 +11,11 @@ class TopNav extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $categories,$products;
+    public function __construct($categories , $products)
     {
-        //
+        $this->categories=$categories;
+        $this->products=$products;
     }
 
     /**
