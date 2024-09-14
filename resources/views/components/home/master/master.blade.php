@@ -9,11 +9,10 @@
 <body>
 <header class="header mb-4">
     <x-home.master.header/>
-
     <x-home.master.top-nav :categories="$categories"
                            :products="$products"/>
 </header>
-{{$slot}}
-<x-home.master.footer/>
-<x-home.master.scripts/>
+        {{$slot}}
+    <x-home.master.footer/>
+    <x-home.master.scripts/>
 </body>
