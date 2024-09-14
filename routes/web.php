@@ -18,6 +18,7 @@ Route::prefix('panel')->group(function (){
         Route::get('/',[ProductController::class,'index'])->name('product.index');
         Route::get('create',[ProductController::class,'create'])->name('product.create');
         Route::post('create',[ProductController::class,'store'])->name('product.store');
+        Route::delete('/{product}',[ProductController::class,'destroy'])->name('product.delete');
     });
 
 });

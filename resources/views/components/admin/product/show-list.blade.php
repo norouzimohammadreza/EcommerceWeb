@@ -8,6 +8,7 @@
                 <th class="text-center">تصویر</th>
                 <th>تاریخ ثبت</th>
                 <th class="text-center">وضیعت</th>
+                <th class="text-center">ویرایش</th>
             </tr>
             </thead>
             <tbody>
@@ -19,6 +20,11 @@
                     </td>
                     <td>{{$product->created_at}}</td>
                     <td class="text-center"><span class="shadow-none badge {{($product->is_active==1)?'badge-primary':'badge-warning'}}">{{($product->is_active==1)? 'منتخب':'نیاز به تایید'}}</span></td>
+                    <form action="{{route('product.delete',$product)}}" method="post">
+                        @method('DELETE')
+                        @csrf
+                        <td><button type="submit"  class="btn btn-danger">حذف</button></td>
+                    </form>
                 </tr>
             @endforeach
             </tbody>

@@ -35,6 +35,12 @@ class ProductController extends Controller
         Alert::success('محصولات', 'محصول جدید به لیست اضافه شد.');
         return redirect()->route('product.index');
     }
+    public function destroy(Product $product)
+    {
+        $product->delete();
+        Alert::toast('محصول از لیست پاک شد.', 'success');
+        return redirect()->route('product.index');
+    }
 }
 
 

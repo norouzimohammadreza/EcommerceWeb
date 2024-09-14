@@ -1,5 +1,5 @@
 <x-admin.master.master>
-    <x-slot name="title">Category Management</x-slot>
+    <x-slot name="title">Categories Management</x-slot>
     <div class="col-lg-12 col-12 layout-spacing">
         <div class="statbox widget box box-shadow">
             <div class="row layout-spacing">
