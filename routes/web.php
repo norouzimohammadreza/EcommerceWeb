@@ -1,12 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PanelController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
-Route::get('/', function () {
-    return 'd';
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::prefix('panel')->group(function (){
     Route::get('/',[PanelController::class,'index']);
     Route::prefix('category')->group(function (){
