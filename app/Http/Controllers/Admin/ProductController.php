@@ -13,7 +13,10 @@ class ProductController extends Controller
 {
     public function index()
     {
-
+        $products = Product::all();
+        return view('admin.product.index',[
+            'products' => $products
+        ]);
     }
     public function create(){
         $categories = Category::all();
@@ -30,6 +33,10 @@ class ProductController extends Controller
         $data['image'] = $name;
         Product::create($data);
         Alert::success('محصولات', 'محصول جدید به لیست اضافه شد.');
-        return redirect('/admin/products');
+        return redirect()->route('product.index');
     }
 }
+
+
+
+
