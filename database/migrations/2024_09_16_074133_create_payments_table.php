@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('uuid')->nullable();
             $table->text('transaction_id')->nullable();
             $table->text('reference_id')->nullable();
-            $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('status')->default(0)->comment('0 => init , 1 => pair , 2 => failed');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
