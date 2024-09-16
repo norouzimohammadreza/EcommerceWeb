@@ -16,4 +16,14 @@ class HomeController extends Controller
             'products' => $products
         ]);
     }
+    public function product(Product $product)
+    {
+        $categories = Category::all();
+        $products = Product::all();
+        return view('home.product',[
+            'product' => $product,
+            'categories' => $categories,
+            'products' => $products
+        ]);
+    }
 }

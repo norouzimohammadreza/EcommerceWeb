@@ -6,6 +6,5 @@
         <x-home.view-products :products="$products"/>
         <x-home.top-ads/>
         <x-home.main-ads/>
-
     </main>
 </x-home.master.master>

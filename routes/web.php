@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\PanelController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/product/{product}', [HomeController::class, 'product'])->name('product');
 Route::prefix('panel')->group(function (){
     Route::get('/',[PanelController::class,'index']);
     Route::prefix('category')->group(function (){
