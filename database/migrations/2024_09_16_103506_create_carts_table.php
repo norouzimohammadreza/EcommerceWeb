@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->index()->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('discount_id');
+            $table->unsignedBigInteger('discount_id')->index()->nullable();
             $table->foreign('discount_id')->references('id')->on('discounts');
             $table->tinyInteger('status')->default(1)->comment('0 => close, 1 => open');
             $table->timestamp('expired_at')->nullable();
